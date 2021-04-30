@@ -88,7 +88,7 @@ $(document).ready(function(){
 	}); 	
 });
 //Kutsutaan backin POST-metodia ja välitetään kutsun mukana uudet tiedot json-stringinä.
-//POST /autot/
+
 function lisaaTiedot(){	
 	var formJsonStr = formDataJsonStr($("#tiedot").serializeArray()); //muutetaan lomakkeen tiedot json-stringiksi
 	$.ajax({url:"asiakkaat", data:formJsonStr, type:"POST", dataType:"json", success:function(result) { //result on joko {"response:1"} tai {"response:0"}       
